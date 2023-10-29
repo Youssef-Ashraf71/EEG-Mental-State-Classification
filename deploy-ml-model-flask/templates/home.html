@@ -1,0 +1,171 @@
+<!-- <html>
+  <body bgcolor="#d4a3ae">
+    <center>
+      <h1>Eye State DETECTION</h1>
+      <br />
+
+      <form method="POST" , action="{{url_for('home')}}">
+        <b>
+          First value :
+          <input type="text" , name="a" , placeholder="enter 1" /> <br /><br />
+          Second value :
+          <input type="text" , name="b" , placeholder="enter 2" /> <br /><br />
+          Third value :
+          <input type="text" , name="c" , placeholder="enter 3" /> <br /><br />
+          Fourth value :
+          <input type="text" , name="d" , placeholder="enter 4" />
+          <br /><br /><br
+        /></b>
+        <input type="submit" , value="predict!" />
+      </form>
+
+      <img src="static\flower1.jpg" alt="flower" />
+    </center>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #d4a3ae;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 36px;
+        color: #ffffff;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        width: 400px;
+        margin: 0 auto;
+      }
+
+      input[type="text"] {
+        width: 80%;
+        padding: 10px 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      input[type="submit"] {
+        background-color: #ff6f61;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #ff5733;
+      }
+      .cool-upload-button {
+        background-color: #4caf50; /* Green background color */
+        color: #fff; /* White text color */
+        padding: 15px 20px; /* Padding for the button */
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer;
+        font-size: 16px;
+        margin-bottom: 20px;
+        transition: background-color 0.3s; /* Smooth hover effect */
+      }
+
+      .cool-upload-button:hover {
+        background-color: #28530b; /* Darker green on hover */
+      }
+
+      /* Add a subtle shadow to the button */
+      .cool-upload-button {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      /* Add a slight gradient effect */
+      .cool-upload-button {
+        background: linear-gradient(to bottom, #4caf50, #45a049);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Eye State Detection Model</h1>
+    <br />
+
+    <!-- Add an input element for file upload -->
+    <input type="file" id="csvFile" accept=".csv" style="display: none" />
+    <button
+      onclick="document.getElementById('csvFile').click()"
+      class="cool-upload-button"
+    >
+      Upload CSV File
+    </button>
+
+    <form method="POST" action="{{ url_for('home') }} " id="eyeStateForm">
+      <b>
+        AF3 value:
+        <input type="text" name="a" placeholder="AF3" /><br /><br />
+        F7 value:
+        <input type="text" name="b" placeholder="F7" /><br /><br />
+        F3 value:
+        <input type="text" name="c" placeholder="F3" /><br /><br />
+        FC5 value:
+        <input type="text" name="d" placeholder="FC5" /><br /><br />
+        <!-- Repeat the following block for the remaining 10 inputs -->
+        T7 value:
+        <input type="text" name="e" placeholder="T7 " /><br /><br />
+        P7 value:
+        <input type="text" name="f" placeholder="P7 " /><br /><br />
+        O1 value:
+        <input type="text" name="g" placeholder="O1 " /><br /><br />
+        O2 value:
+        <input type="text" name="h" placeholder="O2 " /><br /><br />
+        P8 value:
+        <input type="text" name="i" placeholder="P8 " /><br /><br />
+        T8 value:
+        <input type="text" name="j" placeholder="T8 " /><br /><br />
+        FC6 value:
+        <input type="text" name="k" placeholder="FC6 " /><br /><br />
+        F4 value:
+        <input type="text" name="l" placeholder="F4 " /><br /><br />
+        F8 value:
+        <input type="text" name="m" placeholder="F8  " /><br /><br />
+        AF4 value:
+        <input type="text" name="n" placeholder="AF4 " /><br /><br />
+        <br /><br />
+      </b>
+      <input type="submit" value="Predict!" />
+    </form>
+    <script>
+      document
+        .getElementById("csvFile")
+        .addEventListener("change", function (event) {
+          const file = event.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              const csvData = e.target.result;
+              const lines = csvData.split("\n");
+              const formElements =
+                document.getElementById("eyeStateForm").elements;
+
+              if (lines.length >= 1) {
+                const values = lines[0].split(",");
+                for (let i = 0; i < formElements.length; i++) {
+                  if (values[i]) {
+                    formElements[i].value = values[i];
+                  }
+                }
+              }
+            };
+            reader.readAsText(file);
+          }
+        });
+    </script>
+  </body>
+</html>
