@@ -68,11 +68,6 @@ The model is trained with the following settings:
 
 This robust deep learning model architecture and training process ensure effective classification of eye states based on EEG data, making it a valuable tool for various applications.
 
-### Real-time Classification
-- The trained model is implemented to classify the user's ongoing EEG signals in real-time.
-- Continuous processing of incoming EEG data allows for the prediction of the user's current Eye state .
-![image](https://github.com/Youssef-Ashraf71/Task2_Medical/assets/83988379/004ba914-7125-4e69-bef7-9524d6e181f7)
-
 ### Actuator Control
 - An actuator control mechanism is put in place to translate the model's output into appropriate actions. These actions include controlling external servo.
 
@@ -80,6 +75,8 @@ This robust deep learning model architecture and training process ensure effecti
 ## Web Application Deployment
 
 A web application is built using Flask to deploy the model. Users can input EEG data, and the application displays the user's current eye state or protection level. This web app serves as a practical demonstration of the project's capabilities.
+
+![image](https://github.com/Youssef-Ashraf71/Task2_Medical/assets/83988379/004ba914-7125-4e69-bef7-9524d6e181f7)
 
 ---
 
