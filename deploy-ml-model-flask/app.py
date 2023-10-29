@@ -42,24 +42,22 @@ def home():
     arr = np.array(arr).reshape(-1,14,1) 
     pred = model.predict(arr)
     pred = np.array(pred >= 0.5, dtype = np.int64)
-    pred2 = (pred[0])
-    pred2 = (pred2[0])
+    # pred2 = (pred[0])
+    # pred2 = (pred2[0])
     # # Establish serial communication with Arduino
     # arduino = serial.Serial('COM10', 9600)  # Replace with the appropriate port and baud rate
     # print(pred2.encode())
     # arduino.write((pred2).encode())
     # arduino.close()
        # Establish a serial connection
-    serial_inst = serial.Serial()
-    serial_inst.baudrate = 9600
-    serial_inst.port = "COM10"
-    serial_inst.open()
-    command: str =('Arduino Command: (ON/OFF): ')
-    print(command)
-    serial_inst.write(command.encode('utf-8'))
-    serial_inst.close()
-
- 
+    # serial_inst = serial.Serial()
+    # serial_inst.baudrate = 9600
+    # serial_inst.port = "COM10"
+    # serial_inst.open()
+    # command: str =('Arduino Command: (ON/OFF): ')
+    # print(command)
+    # serial_inst.write(command.encode('utf-8'))
+    # serial_inst.close()
     return render_template('after.html', data=pred)
 
 
