@@ -76,8 +76,47 @@ This robust deep learning model architecture and training process ensure effecti
 
 A web application is built using Flask to deploy the model. Users can input EEG data, and the application displays the user's current eye state or protection level. This web app serves as a practical demonstration of the project's capabilities.
 
+
 ![image](https://github.com/Youssef-Ashraf71/Task2_Medical/assets/83988379/004ba914-7125-4e69-bef7-9524d6e181f7)
 
 ---
 
 By combining signal processing, Deep learning, and actuator control, this project provides a comprehensive solution for understanding and utilizing EEG data to classify a user's eye state and take corresponding actions. The web application offers a practical and user-friendly interface for real-world applications.
+
+
+## Contributors
+
+<table>
+  <tr>
+    <td align="center">
+    <a href="https://github.com/fou65" target="_black">
+    <img src="https://avatars.githubusercontent.com/u/115308809?v=4" width="150px;" alt="Farah Osama"/>
+    <br />
+    <sub><b>Farah Osama</b></sub></a>
+    <td align="center">
+    <a href="https://github.com/SaraElsaggan" target="_black">
+    <img src="https://avatars.githubusercontent.com/u/104657535?v=4" width="150px;" alt="Sara Elsaggan"/>
+    <br />
+    <sub><b>Sara Elsaggan</b></sub></a>
+    </td>
+    </td>
+    <td align="center">
+    <a href="https://github.com/yassmin2000" target="_black">
+    <img src="https://avatars.githubusercontent.com/u/105241119?v=4" width="150px;" alt="Yasmin Sayed"/>
+    <br />
+    <sub><b>Yasmin Sayed</b></sub></a>
+    </td>
+   <td align="center">
+    <a href="https://github.com/" target="_black">
+    <img src="" width="150px;" alt="Reem Adel"/>
+    <br />
+    <sub><b>Reem Adel</b></sub></a>
+    </td>
+    <td align="center">
+    <a href="https://github.com/Youssef-Ashraf71" target="_black">
+    <img src="https://avatars.githubusercontent.com/u/83988379?v=4" width="150px;" alt="Youssef Ashraf"/>
+    <br />
+    <sub><b>Youssef Ashraf</b></sub></a>
+    </td>
+      </tr>
+ </table>
